@@ -7,16 +7,16 @@ void R();
 void U();
 int main() {
 	
-    int chioce;
-	int d,student,e,grade;
+    int Chioce;
+	int CharD1,Student,Grade;
 	
 	X: 
     printf("\n\n遊戲:(A)遊戲畫面(B)成績畫面(C)匯率轉換畫面(Q)離開選單，結束程式");
 	printf("\n\n選擇遊戲: ");
-	scanf("%d",&chioce);  //選擇哪一個程式 
+	scanf("%d",&Chioce);  //選擇哪一個程式 
 	
-    d=(chioce=getchar()); //將選擇的值變成char 
-    switch(d)
+    CharD1=(Chioce=getchar()); //將選擇的值變成char 
+    switch(CharD1)
 	{
 		case 'A':{ A();     //呼叫A函數 
 			       break;
@@ -39,35 +39,35 @@ int main() {
 	return 0;
 }
 void R()        //判斷成績等級 
-{   int d,student,i,grade;
+{   int Student,i,Grade;
 	
 	printf("輸入學生人數: ");
-    scanf("%d",&student);
+    scanf("%d",&Student);
 	               
-                   for(i=1;i<=student;i++)
+                   for(i=1;i<=Student;i++)
 	               {
 	               	printf("輸入學生成績: ");
-	                scanf("%d",&grade);
+	                scanf("%d",&Grade);
 	                
-	                if(grade>=90) {printf("A+\n");}                      
-					else if(grade>=80&&grade<=89){	printf("A\n");}
-					else if(grade>=70&&grade<=79) {printf("B\n");} 
-					else if(grade>=60&&grade<=69) {printf("C\n");} 
+	                if(Grade>=90) {printf("A+\n");}                      
+					else if(Grade>=80&&Grade<=89){	printf("A\n");}
+					else if(Grade>=70&&Grade<=79) {printf("B\n");} 
+					else if(Grade>=60&&Grade<=69) {printf("C\n");} 
 					else {printf("D\n");} 
 					}
 }
 
 void U()   //匯率換算 
-{   int s,grade;
-	float i,d;
+{   int Chioce;
+	float UAS,TWD;
 	printf("輸入兌換率:");
-    scanf("%f",&d);
+    scanf("%f",&TWD);
     printf("(美金換台幣輸入: 1  台幣換美金輸入: 2):");
-    scanf("%d",&s);
+    scanf("%d",&Chioce);
     printf("兌換多少:");
-    scanf("%f",&i);
-	if (s=1){printf("%f,美金換台幣,%f",i,i*d);}
-	else {	printf("%f,台幣換美金,%f\n",i,i/d);}	
+    scanf("%f",&UAS);
+	if (Chioce=1){printf("%f,美金換台幣,%f",UAS,UAS*TWD);}
+	else {	printf("%f,台幣換美金,%f\n",UAS,UAS/TWD);}	
 }
 
 void A()    //狀態循環 
